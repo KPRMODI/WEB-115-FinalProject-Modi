@@ -7,12 +7,20 @@
     <script src="script.js" defer> </script>
 </head>
 <body>
-    <h1> Task Manager</h1>
-    <input id = "hi"> 
-    <button type = "submit" id="l">add task</button>
-    <button type="reset" >aa</button>
+    <h1> Task Manager</h1 id = "header">
 
-    <div id = "taskmanager"> </div> 
+    <input type="text" id = "input">
+    <select id = "taskpriority">
+        <option value = "high"> High </option>
+        <option value = "medium"> Medium </option>
+        <option value = "low"> Low </option>
+    </select>
+    <input type="checkbox" id="checkbox" > Important
+    <button type="submit" id="submit">Submit</button>
+    <br>
+<div id = "taskmanager"> </div> 
+
+
 
 </body>
 </html>
