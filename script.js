@@ -53,9 +53,10 @@ submit.addEventListener("click", () =>{ // When submit is clicked, assign all va
 
         let newcheck = document.createElement(`input`)
         newcheck.setAttribute("type", "checkbox")
+        newdiv.appendChild(newcheck)
 
         checkname = document.createElement("p")
-        checkname.innerHTML = "hi"
+        checkname.innerHTML = "done"
         newdiv.appendChild(checkname)
 
 
