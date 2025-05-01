@@ -21,4 +21,6 @@ Some Problems I still have with this is dynamically changing the console log to 
 
 Another issue I had was style formatting the undo button for the task complete checkbox. I didn't know how to only remove the line-through CSS for it, so I had to removeattribute the styles and CSS which removed all of the formatting. However after 30 minutes of Debugging and writing code I was able to fix this issue and found a solution, although it did require a alot of time I could've used for other parts of the code to refine it.
 
+Sometimes the div will console log and change the undo button of the wrong div and I didn't know how to fix this
+
 I am not the best at CSS so I am not suprised I had so many errors in this case, but in the future I should learn more about CSS and how it interacts with Javascript.

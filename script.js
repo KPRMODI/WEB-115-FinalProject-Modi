@@ -63,24 +63,25 @@ submit.addEventListener("click", () =>{ // When submit is clicked, assign all va
 
     // Add a line through if the check box is checked
     newcheck.addEventListener("click", () =>{
+        checkname.innerHTML = "undo"
         newdiv.style.textDecoration = "line-through"
         tasks.isCompleted = true
-        checkname.innerHTML = "undo"
         console.log(JSON.stringify(tasks))
         newcheck.addEventListener("click", () =>{ // undoes the checkbox if clicked agaiin
+            checkname.innerHTML = "click to complete"
             newdiv.removeAttribute("style","textDecoration: line-through")
             newdiv.style.border = "2px solid"
             newdiv.style.padding = "10px"
             newdiv.style.margin = "10px"
             newdiv.style.fontSize = "20px"
-            checkname.innerHTML = "click to complete"
+            tasks.isCompleted = false
             if (importantcheckbox.checked == true) { //makes box red again
                 newdiv.style.backgroundColor = "red"
             }
             if (newcheck.checked == true) { // if checked again, makes text line-through again 
+                checkname.innerHTML = "undo"
                 newdiv.style.textDecoration = "line-through"
                 tasks.isCompleted = true
-                checkname.innerHTML = "undo"
                 console.log(JSON.stringify(tasks))
             }
         })
