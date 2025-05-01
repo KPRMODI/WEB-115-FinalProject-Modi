@@ -67,9 +67,22 @@ submit.addEventListener("click", () =>{ // When submit is clicked, assign all va
         tasks.isCompleted = true
         checkname.innerHTML = "undo"
         console.log(JSON.stringify(tasks))
-        newcheck.addEventListener("click", () =>{ // is supposed to undo this, but I couldn't get it to work
+        newcheck.addEventListener("click", () =>{ // undoes the checkbox if clicked agaiin
             newdiv.removeAttribute("style","textDecoration: line-through")
-    
+            newdiv.style.border = "2px solid"
+            newdiv.style.padding = "10px"
+            newdiv.style.margin = "10px"
+            newdiv.style.fontSize = "20px"
+            checkname.innerHTML = "click to complete"
+            if (importantcheckbox.checked == true) { //makes box red again
+                newdiv.style.backgroundColor = "red"
+            }
+            if (newcheck.checked == true) { // if checked again, makes text line-through again 
+                newdiv.style.textDecoration = "line-through"
+                tasks.isCompleted = true
+                checkname.innerHTML = "undo"
+                console.log(JSON.stringify(tasks))
+            }
         })
 })
 
